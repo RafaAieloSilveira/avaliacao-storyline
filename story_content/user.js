@@ -23,7 +23,7 @@ var email = player.GetVar("Email");
 var acertos = player.GetVar("Acertos");
 var erros = player.GetVar("Erros");
 
-fetch("https://script.google.com/a/macros/omie.com.br/s/AKfycbyPFzY3zhCj9sTBMiPIoUPekqYo1G3iF_j-job9ewgh2e_Mn2JRTLGo3jU-UWVCDC_p/exec", {
+fetch("https://script.google.com/a/macros/omie.com.br/s/AKfycbxfjxszda_CrGEkKmonD_yszpf_rqK9M1bXXn7ojGS66FhHJV73fxNcHgEGtu3T9Qen/exec", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -35,7 +35,10 @@ fetch("https://script.google.com/a/macros/omie.com.br/s/AKfycbyPFzY3zhCj9sTBMiPI
     acertos: acertos,
     erros: erros
   })
-});
+})
+.then(response => response.text())
+.then(data => console.log("Resposta do servidor:", data))
+.catch(error => console.error("Erro ao enviar dados:", error));
 
 }
 
