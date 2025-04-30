@@ -15,7 +15,12 @@ var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 window.Script1 = function()
 {
-  var player = GetPlayer();
+  console.log("NOME:", nome);
+console.log("EMAIL:", email);
+console.log("INSTITUICAO:", instituicao);
+console.log("DESEMPENHO:", desempenho);
+
+var player = GetPlayer();
 
 var nome = player.GetVar("Nome");
 var email = player.GetVar("Email");
