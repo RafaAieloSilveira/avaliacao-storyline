@@ -15,7 +15,9 @@ var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 window.Script1 = function()
 {
-  var player = GetPlayer();
+  console.log("Instituição:", instituicao);
+
+var player = GetPlayer();
 
 var nome = player.GetVar("Nome");
 var email = player.GetVar("Email");
@@ -30,8 +32,8 @@ console.log("Desempenho:", desempenho);
 var url = "https://docs.google.com/forms/d/e/1FAIpQLSe4i50Rq7hDqomKd1g4Fk-6iEtYYzX_utqqkD-rBJKwHMs1eg/viewform?usp=pp_url" +
           "&entry.1252185723=" + encodeURIComponent(nome) +
           "&entry.1438357341=" + encodeURIComponent(email) +
-          "&entry.935022108=" + encodeURIComponent(instituicao)
-;
+          "&entry.935022108=" + encodeURIComponent(instituicao)+
+          "&entry.260721794=" + encodeURIComponent(desempenho);
 
 console.log("URL gerada:", url);
 window.open(url, "_blank");
