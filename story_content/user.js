@@ -15,16 +15,17 @@ var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 window.Script1 = function()
 {
-  console.log("NOME:", nome);
-console.log("EMAIL:", email);
-console.log("INSTITUICAO:", instituicao);
-console.log("DESEMPENHO:", desempenho);
-
-var player = GetPlayer();
+  var player = GetPlayer();
 
 var nome = player.GetVar("Nome");
 var email = player.GetVar("Email");
 var instituicao = player.GetVar("Instituicao");
+var desempenho = player.GetVar("Desempenho");
+
+console.log("Nome:", nome);
+console.log("Email:", email);
+console.log("Instituição:", instituicao);
+console.log("Desempenho:", desempenho);
 
 var url = "https://docs.google.com/forms/d/e/1FAIpQLSe4i50Rq7hDqomKd1g4Fk-6iEtYYzX_utqqkD-rBJKwHMs1eg/viewform?usp=pp_url" +
           "&entry.1252185723=" + encodeURIComponent(nome) +
